@@ -1,14 +1,15 @@
 import { test, expect, chromium } from '@playwright/test'
 import { resetDatabase } from '../utils/resetDatabase';
 
-const browser = await chromium.launch({ slowMo: 1000 })
-const page = await browser.newPage()
+
 test.beforeAll(async () => {
+    const browser = await chromium.launch({ slowMo: 1000 })
+    const page = await browser.newPage()
     // Reset database
-    resetDatabase(page);
+    await resetDatabase(page);
 });
 
-test('has title', async () => {
+test('has title', async ({page}) => {
 
   // Create a new team
   await page.goto('/add_team')
