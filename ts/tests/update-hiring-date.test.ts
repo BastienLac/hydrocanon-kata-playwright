@@ -17,7 +17,7 @@ test("Update hiringDate", async ({ page }) => {
     employeeAddress: "toto",
     employeeCity: "Paris",
     zipcode: "75020",
-    hiringDate: "2025-02-25",
+    hiringDate: hiringDate,
     jobTitle: "RH",
   });
 
