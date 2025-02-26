@@ -8,7 +8,7 @@ test.beforeAll(async () => {
   await resetDatabase(page);
 });
 
-test("has title", async ({ page }) => {
+test("Add Team Test", async ({ page }) => {
   // Create a new team
   const teamName = "my team";
   await createTeam(page, teamName);

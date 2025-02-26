@@ -8,7 +8,7 @@ test.beforeAll(async () => {
   await resetDatabase(page);
 });
 
-test("test", async ({ page }) => {
+test("Add Employee Test", async ({ page }) => {
   const employeeName = "TestEmployee";
   await page.goto("https://h.lsi2.hr.dmerej.info/");
   await page.getByRole("link", { name: "Add new employee" }).click();
